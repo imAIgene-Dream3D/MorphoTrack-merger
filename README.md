@@ -1,25 +1,54 @@
-# 📦 Streamlit App Starter Kit 
-```
-⬆️ (Replace above with your app's name)
-```
+# MorphoTrack-merger
 
-Description of the app ...
+MorphoTrack-Merger is a Python-based tool designed to extract morphological features from segmented images and merge them with tracking data from TrackMate. This tool is particularly useful for researchers working in bioimaging and cell tracking, as it allows for seamless integration of morphological data with trajectory information.
 
-## Demo App
+## Streamlit online App
 
-[![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://app-starter-kit.streamlit.app/)
+[![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://app-starter-kit.streamlit.app)
 
-## GitHub Codespaces
+**Key Features:**
+- 2D and 3D Support: Extract morphological features from both 2D and 3D segmented images.
 
-[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/streamlit/app-starter-kit?quickstart=1)
+- TrackMate Integration: Merge extracted features with TrackMate tracking data for comprehensive analysis.
 
-## Section Heading
+- Visualization: Visualize tracks in 2D or 3D space directly within the application.
 
-This is filler text, please replace this with text for this section.
+- User-Friendly Interface: Built with Streamlit, providing an intuitive web-based interface for easy data processing and visualization.
 
-## Further Reading
+**How It Works:**
+1. *Upload Files*: Users upload a segmentation TIFF file and a TrackMate CSV file.
 
-This is filler text, please replace this with a explanatory text about further relevant resources for this repo
-- Resource 1
-- Resource 2
-- Resource 3
+2. *Select Mode*: Choose between 2D or 3D processing based on the data.
+
+3. *Process Data*: The tool extracts morphological features (e.g., volume, centroid, major/minor axis length) and merges them with the corresponding TrackMate data.
+
+4. *Visualize and Download*: Visualize the merged tracks and download the processed data as a CSV file.
+
+## Dependencies:
+- streamlit
+- numpy
+- pandas
+- scikit-image
+- scipy
+- matplotlib
+
+## Usage:
+Install the required dependencies see [requirements.txt](https://github.com/imAIgene-Dream3D/MorphoTrack-merger/blob/master/requirements.txt)
+
+
+## Example Workflow:
+- Input: Segmentation TIFF and TrackMate CSV.
+
+- Processing: Extract features and merge with TrackMate data.
+
+- Output: CSV file with merged data and visual plots of tracks.
+
+## Contributing:
+Contributions are welcome! Please fork the repository and submit a pull request with your improvements.
+
+## License:
+This project is licensed under the MIT License. See the LICENSE file for details.
+
+
+
+
