@@ -16,23 +16,14 @@ def morphological_features_2d(seg_path, track_path):
         labels_3d = labels_4d[t].astype(np.int32)
         regions = measure.regionprops(labels_3d)
 
-        for region in regions:
-            if region.area < 2:
-                continue
-            
-            try:
-                minor_axis_length = region.axis_minor_length
-            except ValueError:
-                minor_axis_length = np.nan
-            
+        for region in regions:            
             features.append({
-
                 'Volume': region.area,
                 'Centroid_Y': region.centroid[0],
                 'Centroid_X': region.centroid[1],
                 'Major_Axis_Length': region.axis_major_length,
-                'Minor_Axis_Length': minor_axis_length,
-                'Elongation': region.axis_major_length / minor_axis_length if minor_axis_length > 0 else np.nan
+                'Minor_Axis_Length': region.axis_minor_length,
+                'Elongation': region.axis_major_length / region.axis_minor_length if region.axis_minor_length != 0 else None
             })
 
     features_df = pd.DataFrame(features).drop_duplicates()
@@ -168,3 +159,4 @@ if process_button and seg_file and track_file:
         # Visualization
         st.subheader("Tracks Visualization")
         plot_tracks(merged_df, mode)
+        
