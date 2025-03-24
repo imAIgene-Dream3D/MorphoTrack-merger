@@ -4,7 +4,7 @@ MorphoTrack-Merger is a Python-based tool designed to extract morphological feat
 
 ## Streamlit online App
 
-[![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://app-starter-kit.streamlit.app)
+[![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://morphotrack-merger.streamlit.app/)
 
 **Key Features:**
 - 2D and 3D Support: Extract morphological features from both 2D and 3D segmented images.
